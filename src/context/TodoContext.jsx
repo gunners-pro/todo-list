@@ -6,15 +6,19 @@ const todoItem = [
     id: v4(),
     content: 'Adicionar primeira tarefa',
   },
+  {
+    id: v4(),
+    content: 'Aprender sobre Angular',
+  },
 ];
 
 const initialTodos = [
   {
-    title: 'A Fazer',
+    title: 'To Do',
     items: todoItem,
   },
   {
-    title: 'Concluídas',
+    title: 'Done',
     items: [],
   },
 ];
@@ -22,9 +26,11 @@ const initialTodos = [
 export const TodoContext = createContext();
 
 function TodoProvider({ children }) {
-  const [todos] = useState(initialTodos);
+  const [todos, setTodos] = useState(initialTodos);
   return (
-    <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>
+    <TodoContext.Provider value={{ todos, setTodos }}>
+      {children}
+    </TodoContext.Provider>
   );
 }
 

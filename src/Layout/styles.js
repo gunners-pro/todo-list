@@ -34,4 +34,3 @@ export const ContentMain = styled.main`
   height: 100%;
   width: 60%;
 `;
-
