@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundImg from '../assets/background.png';
+import Todo from '../Pages/Todo';
 
 import { Container, ContentLeft, ContentMain } from './styles';
 
@@ -14,7 +15,7 @@ function Layout() {
         </h1>
       </ContentLeft>
       <ContentMain>
-        <h3>Content</h3>
+        <Todo />
       </ContentMain>
     </Container>
   );
