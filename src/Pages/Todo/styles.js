@@ -12,6 +12,5 @@ export const TodoHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 25px 0;
-  background-color: #e9edef;
+  padding: 8px 25px 0;
 `;

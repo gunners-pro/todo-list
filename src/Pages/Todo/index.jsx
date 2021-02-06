@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { TodoContext } from '../../context/TodoContext';
-
+import AddCardTodo from '../../components/AddCardTodo';
 import { Container, TodoHeader } from './styles';
 
 function Todo() {
@@ -10,7 +10,9 @@ function Todo() {
   return (
     <Container>
       <DragDropContext>
-        <TodoHeader>header</TodoHeader>
+        <TodoHeader>
+          <AddCardTodo />
+        </TodoHeader>
       </DragDropContext>
     </Container>
   );
