@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 function Todo() {
-  const { todos, setTodos } = useContext(TodoContext);
+  const { todos, setTodos, storeTodoBeforeUnmount } = useContext(TodoContext);
 
   function handleDragItems({ destination, source }) {
     if (!destination) return;
@@ -39,6 +39,8 @@ function Todo() {
         return { ...list, items: [...list.items] };
       }),
     );
+
+    storeTodoBeforeUnmount();
   }
 
   return (

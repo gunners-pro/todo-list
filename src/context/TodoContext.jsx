@@ -46,6 +46,15 @@ function TodoProvider({ children }) {
     }
   }
 
+  function storeTodoBeforeUnmount() {
+    try {
+      const stringValue = JSON.stringify(todos);
+      localStorage.setItem('@todo-list:todos', stringValue);
+    } catch (e) {
+      throw new Error(`Erro: ${e}`);
+    }
+  }
+
   function storeTodo(content) {
     const id = v4();
     setTodos(prevState =>
@@ -100,7 +109,9 @@ function TodoProvider({ children }) {
   }
 
   return (
-    <TodoContext.Provider value={{ todos, setTodos, removeTodo, storeTodo }}>
+    <TodoContext.Provider
+      value={{ todos, setTodos, removeTodo, storeTodo, storeTodoBeforeUnmount }}
+    >
       {children}
     </TodoContext.Provider>
   );
