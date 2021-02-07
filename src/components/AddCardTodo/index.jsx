@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { TodoContext } from '../../context/TodoContext';
 
 import { Container } from './styles';
 
 function AddCardTodo() {
   const [text, setText] = useState('');
+  const { storeTodo } = useContext(TodoContext);
 
   function AddTodo() {
-    // todo
+    if (!text) return;
+
+    storeTodo(text);
+    setText('');
   }
 
   return (

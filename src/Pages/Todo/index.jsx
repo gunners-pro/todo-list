@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { TodoContext } from '../../context/TodoContext';
 import AddCardTodo from '../../components/AddCardTodo';
+import TodoCard from '../../components/TodoCard';
 import {
   Container,
   TodoHeader,
   TodoDragDrop,
   TodoColum,
   ColDroppable,
-  Card,
 } from './styles';
 
 function Todo() {
@@ -72,7 +72,7 @@ function Todo() {
                                   {...dragProvide.draggableProps}
                                   {...dragProvide.dragHandleProps}
                                 >
-                                  <Card>{item.content}</Card>
+                                  <TodoCard item={item} />
                                 </div>
                               )}
                             </Draggable>

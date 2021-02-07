@@ -58,15 +58,3 @@ export const ColDroppable = styled.div`
     background: transparent;
   }
 `;
-
-export const Card = styled.div`
-  background-color: #3c434c;
-  color: #7a7f85;
-  width: 300px;
-  margin: 8px;
-  padding: 8px;
-  display: flex;
-  box-shadow: 0 0 10px #1e232a;
-  border-radius: 3px;
-  word-break: break-all;
-`;
