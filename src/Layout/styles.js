@@ -19,13 +19,26 @@ export const ContentLeft = styled.aside`
   & > img {
     width: 60%;
     padding-bottom: 30px;
+    opacity: 0;
   }
 
   & > h1 {
-    font-size: 32px;
+    font-size: 2rem;
     color: #65696d;
     text-align: justify;
     padding-top: 30px;
+  }
+
+  @media (max-width: 1080px) {
+    & > h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    & {
+      display: none;
+    }
   }
 `;
 
@@ -33,4 +46,10 @@ export const ContentMain = styled.main`
   background-color: #242a31;
   height: 100%;
   width: 60%;
+
+  @media (max-width: 720px) {
+    & {
+      width: 100%;
+    }
+  }
 `;

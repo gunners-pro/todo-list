@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+`;
 
 export const Card = styled.div`
   background-color: #3c434c;
@@ -9,6 +12,8 @@ export const Card = styled.div`
   margin: 8px;
   padding: 8px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 0 10px #1e232a;
   border-radius: 3px;
   word-break: break-all;

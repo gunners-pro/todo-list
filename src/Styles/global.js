@@ -7,7 +7,19 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  #root, html, body {
-    font-family: 'Nunito', sans-serif;
+  @media(max-width: 1080px){
+    html {
+        font-size: 90%;
+    }
+  }
+
+  @media(max-width: 720px){
+    html {
+        font-size: 80%;
+    }
+  }
+
+  #root, html, body, input, textarea, button {
+    font: 400 1rem 'Nunito', sans-serif;
   }
 `;
