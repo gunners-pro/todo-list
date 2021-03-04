@@ -16,7 +16,7 @@ export const Card = styled.div`
   justify-content: space-between;
   box-shadow: 0 0 10px #1e232a;
   border-radius: 3px;
-  word-break: break-all;
+  word-break: keep-all;
 
   & > p {
     font-size: 15px;
